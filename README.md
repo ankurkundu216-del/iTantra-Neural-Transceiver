@@ -58,7 +58,7 @@ Instead of streaming bandwidth-heavy raw audio over fragile RF links, iTantra ca
 > **All P2P packet exchanges enforce a strict, byte-packed 6-byte binary header followed by a UTF-8 encoded text payload.**
 
 ### 1. Packet Memory Layout
-
+```text
 0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -66,6 +66,7 @@ Instead of streaming bandwidth-heavy raw audio over fragile RF links, iTantra ca
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 | Payload Len L |  Checksum XOR | Payload Data (UTF-8 Bytes...) |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+```
 
 ### 2. C Structure Memory Definition
 ```C
