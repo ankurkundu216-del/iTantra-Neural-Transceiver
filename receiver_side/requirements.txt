@@ -1,0 +1,10 @@
+# Neural Speech Synthesis Engine (MMS-VITS / Piper ONNX C++ runtime)
+sherpa-onnx>=1.10.0
+
+# Audio I/O and Array Processing
+sounddevice>=0.4.6
+numpy>=1.24.0
+
+# Asset Setup & Utilities
+requests>=2.31.0
+tqdm>=4.66.0
