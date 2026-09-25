@@ -58,7 +58,7 @@ Instead of streaming bandwidth-heavy raw audio over fragile RF links, iTantra ca
 > **All P2P packet exchanges enforce a strict, byte-packed 6-byte binary header followed by a UTF-8 encoded text payload.**
 
 ### 1. Packet Memory Layout
-```text
+
 0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
@@ -66,7 +66,6 @@ Instead of streaming bandwidth-heavy raw audio over fragile RF links, iTantra ca
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 | Payload Len L |  Checksum XOR | Payload Data (UTF-8 Bytes...) |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-```
 
 ### 2. C Structure Memory Definition
 ```C
@@ -82,7 +81,7 @@ typedef struct {
 ```
 
 ### 3. Header Specification Table
-```text
+
 | Offset | Field Name | Type | Size | Description |
 | :--- | :--- | :--- | :--- | :--- |
 | `0x00` | **Magic Byte** | `uint8_t` | 1 Byte | Header validation signature (`0x49` / ASCII `'I'`) |
@@ -91,7 +90,6 @@ typedef struct {
 | `0x03` | **Payload Length** | `uint16_t` | 2 Bytes | Big-Endian byte length (*N*) of trailing text payload |
 | `0x05` | **Checksum** | `uint8_t` | 1 Byte | Hardware XOR CRC calculated across entire frame |
 | `0x06` | **Payload** | `char[]` | *N* Bytes | Raw UTF-8 encoded transcribed speech string |
-```
 
 ---
 
