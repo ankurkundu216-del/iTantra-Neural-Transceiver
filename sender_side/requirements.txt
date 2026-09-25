@@ -1,0 +1,7 @@
+# iTantra Neural Transceiver - Sender Side Dependencies
+# Optimized for Edge ML execution (No PyTorch/TensorFlow bloat)
+
+sherpa-onnx==1.10.1      # C++ native backend for offline STT (Whisper/Zipformer)
+onnxruntime==1.17.1      # Lightweight ML inferencing engine for Silero VAD
+sounddevice==0.4.6       # Non-blocking C-based audio I/O 
+numpy==1.26.4            # Fast array manipulation for audio buffers

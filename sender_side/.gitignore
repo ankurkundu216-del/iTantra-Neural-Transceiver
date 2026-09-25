@@ -1,0 +1,13 @@
+# Python cache & temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ONNX model weights (downloaded via setup_assets.py)
+*.onnx
+
+# Virtual environments & IDE settings
+venv/
+.venv/
+.vscode/
+.idea/
