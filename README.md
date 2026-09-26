@@ -251,8 +251,8 @@ python -m sender_side.tests.mock_sender_stream
 
 > [x] Dual Bluetooth RFCOMM / Wi-Fi Direct P2P transport adapters.
 
-> [ ] Multi-Hop Mesh Relaying: Ad-hoc node forwarding for extended geographical coverage without infrastructure.
+> [  ] Multi-Hop Mesh Relaying: Ad-hoc node forwarding for extended geographical coverage without infrastructure.
 
-> [ ] AES-256-GCM Encryption: End-to-end cryptographic payload sealing over untrusted RF channels.
+> [  ] AES-256-GCM Encryption: End-to-end cryptographic payload sealing over untrusted RF channels.
 
-> [ ] Adaptive Language Translation: Automatic cross-language speech translation prior to receiver synthesis.
+> [  ] Adaptive Language Translation: Automatic cross-language speech translation prior to receiver synthesis.
